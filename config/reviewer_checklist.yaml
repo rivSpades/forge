@@ -1,0 +1,18 @@
+checks:
+  - id: competitors_real
+    description: "Are all named competitors verifiable? (name + URL present for each)"
+  - id: market_size_sourced
+    description: "Does market_size_source contain a non-empty citation?"
+  - id: risks_specific
+    description: "Are all risks specific named concerns, not generic statements?"
+  - id: effort_score_explained
+    description: "Does the assessment mention build complexity or effort?"
+  - id: monetization_matches_market
+    description: "Does the monetization model make sense for the identified competitor pricing?"
+  - id: no_insufficient_data
+    description: "Does the report contain INSUFFICIENT_DATA in any field?"
+    escalate_if_true: true  # if true, escalate directly instead of REVISE
+
+thresholds:
+  min_checks_to_pass: 5
+  max_revisions: 2

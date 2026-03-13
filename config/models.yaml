@@ -1,0 +1,16 @@
+# Model assignments for Phase 1 agents
+# See Phase 1 Step 1 in the FORGE blueprint.
+
+scout:    claude-sonnet-4-6
+analyst:  claude-sonnet-4-6
+reviewer: claude-sonnet-4-6
+judge:    claude-opus-4-6
+digest:   claude-sonnet-4-6
+architect: claude-opus-4-6
+arch_reviewer: claude-sonnet-4-6
+designer: claude-sonnet-4-6
+marketing_strategist: claude-sonnet-4-6
+design_reviewer: claude-sonnet-4-6
+marketing_reviewer: claude-sonnet-4-6
+project_manager: claude-opus-4-6
+plan_reviewer: claude-sonnet-4-6

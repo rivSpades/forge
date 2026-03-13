@@ -1,0 +1,48 @@
+dimensions:
+  market_demand:
+    weight: 0.25
+    scores:
+      2: "Personal frustration post, no indication others share it, no existing products"
+      4: "Reddit threads discussing the problem but no paid solutions visible"
+      6: "Multiple paid competitors exist, idea describes a specific unmet gap"
+      8: "Competitors with visible user bases. Thread references specific dollar amounts others pay"
+      10: "Competitors with public revenue (IndieHackers/PH). Clear unserved segment with budget"
+
+  competition_moat:
+    weight: 0.20
+    scores:
+      2: "Dominated by well-funded incumbents with free tiers (e.g. Notion, Linear, Slack)"
+      4: "Several established players but no clear leader. Price competition likely"
+      6: "Clear leader but with specific technical or UX gaps this idea addresses"
+      8: "Fragmented market, no dominant player, niche is underserved"
+      10: "No direct competitor exists. Idea targets a workflow no tool currently supports"
+
+  build_complexity:
+    weight: 0.20
+    scores:
+      2: "Requires real-time collab, AI training, multi-platform, complex integrations"
+      4: "Full SaaS with custom auth, payments, complex data model, 2+ months solo"
+      6: "Standard web app with Stripe + DB, buildable in 3-5 weeks by one developer"
+      8: "Simple tool, Next.js + Supabase + one API, 1-2 weeks"
+      10: "Static site or single-page tool, no backend, buildable in 2-3 days"
+
+  time_to_revenue:
+    weight: 0.20
+    scores:
+      2: "Requires large user base before monetization is possible (e.g. marketplace)"
+      4: "B2B with 60+ day sales cycles or 90+ day free trial before conversion"
+      6: "Freemium with a clear paid ceiling, typical conversion 4-8 weeks post-signup"
+      8: "Paid-first or short trial. Revenue from day one if marketing drives traffic"
+      10: "Can charge on signup or immediately after first value moment. No delayed paywall"
+
+  capital_required:
+    weight: 0.15
+    scores:
+      2: "Requires $50k+ in infra, data, licenses, or legal before launch"
+      4: "Requires $5k-$50k. Custom hardware, specialized data, or compliance costs"
+      6: "Standard SaaS infra $200-500/mo plus time. Bootstrappable with 3-6 months runway"
+      8: "Under $100/mo infra. No specialized requirements. Buildable on free tiers initially"
+      10: "Near-zero ongoing cost. No infra, no licenses. Time is the only investment"
+
+go_threshold: 6.5
+high_confidence_threshold: 7.5

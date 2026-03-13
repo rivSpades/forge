@@ -1,0 +1,15 @@
+checks:
+  - id: stack_right_sized
+    description: "Is the recommended stack appropriate for the product complexity (not overbuilt or underpowered)?"
+  - id: all_features_accounted_for
+    description: "Are all features in the idea brief represented in the architecture or feature list?"
+  - id: security_design_present
+    description: "Is there a clear security design addressing auth, data protection, and common attack vectors?"
+  - id: third_party_apis_costed
+    description: "Are all recommended third-party APIs costed with current pricing?"
+  - id: mvp_vs_v1_distinction
+    description: "Does the MVP feature list clearly differ from the V1 feature list?"
+
+thresholds:
+  min_checks_to_pass: 4
+  max_revisions: 1

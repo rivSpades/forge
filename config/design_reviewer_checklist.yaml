@@ -1,0 +1,15 @@
+checks:
+  - id: name_uniqueness
+    description: "Are the proposed product names likely unique and not trademarked for this category?"
+  - id: social_handle_availability
+    description: "Are social handles (Twitter/Instagram) checked for availability for each proposed name?"
+  - id: palette_fit
+    description: "Does the color palette suit the product category and competitive landscape?"
+  - id: UX_flow_completeness
+    description: "Are user flows and key screens sufficient for an MVP experience?"
+  - id: naming_rationale
+    description: "Does each proposed name include a clear rationale tied to the product audience?"
+
+thresholds:
+  min_checks_to_pass: 4
+  max_revisions: 2

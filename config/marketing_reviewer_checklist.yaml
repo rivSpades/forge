@@ -1,0 +1,15 @@
+checks:
+  - id: specific_icp
+    description: "Is the ideal customer profile described as a specific persona/type (not just 'small businesses')?"
+  - id: channel_tactics
+    description: "Do all one or more recommended acquisition channels include specific tactics, not just channel names?"
+  - id: pricing_urls
+    description: "Are pricing recommendations supported by valid competitor URLs?"
+  - id: community_sources
+    description: "Are community recommendations linked to real forums or subreddits relevant to the ICP?"
+  - id: cpc_sources
+    description: "Are CPC estimates backed by source URLs or tool references?"
+
+thresholds:
+  min_checks_to_pass: 4
+  max_revisions: 2

@@ -1,0 +1,15 @@
+checks:
+  - id: no_tbd
+    description: "Does the briefing contain no TBD/placeholder text?"
+  - id: budget_sources
+    description: "Are all budget items tied to named sources (URLs or vendor names)?"
+  - id: action_dependency_order
+    description: "Are CEO action items ordered with clear dependencies (what must happen first)?"
+  - id: mrr_assumptions
+    description: "Do projected MRR figures include sourced assumptions (conversion, pricing, traffic, etc.)?"
+  - id: consistent_roadmap
+    description: "Is the phased roadmap consistent with the MVP/V1 scope and does it contain clear target dates?"
+
+thresholds:
+  min_checks_to_pass: 4
+  max_revisions: 2

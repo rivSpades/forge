@@ -1,0 +1,23 @@
+forums:
+  - name: BlackHatWorld
+    url: https://www.blackhatworld.com/forums/making-money.12/
+    type: thread_list
+    active: true
+    pages: 30
+    min_upvotes: 0
+    keywords:
+      - "launched"
+      - "making money"
+      - "first revenue"
+      - "built"
+      - "case study"
+
+categories:
+  - SaaS
+  - Tool/App
+  - Content
+  - Marketplace
+  - Affiliate
+  - Service
+  - Community
+  - Other
