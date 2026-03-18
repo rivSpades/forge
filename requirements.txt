@@ -1,0 +1,27 @@
+# Core (Phase 1)
+anthropic
+supabase
+python-dotenv
+pyyaml
+apscheduler
+requests
+firecrawl-py
+resend
+schedule
+
+# Phase 2
+notion-client
+
+# Phase 3 (build pipeline: GitHub, Vercel, Railway)
+PyGithub
+cryptography
+
+# Phase 3 — Webhook API + QA
+fastapi
+uvicorn[standard]
+
+# Phase 3 — QA Agent (Playwright e2e + Lighthouse)
+playwright
+pytest
+pytest-playwright
+pytest-base-url

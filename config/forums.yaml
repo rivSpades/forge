@@ -1,9 +1,9 @@
 forums:
   - name: BlackHatWorld
-    url: https://www.blackhatworld.com/forums/making-money.12/
+    url: https://www.blackhatworld.com/forums/my-journey-discussions.167/
     type: thread_list
     active: true
-    pages: 30
+    pages: 5
     min_upvotes: 0
     keywords:
       - "launched"

@@ -14,3 +14,6 @@ design_reviewer: claude-sonnet-4-6
 marketing_reviewer: claude-sonnet-4-6
 project_manager: claude-opus-4-6
 plan_reviewer: claude-sonnet-4-6
+# Phase 3 — Build (Code Reviewer on webhook, QA agent)
+code_reviewer: claude-sonnet-4-6
+qa: claude-sonnet-4-6

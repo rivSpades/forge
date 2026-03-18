@@ -41,18 +41,29 @@ def _update_notion_status(notion_url: str | None, status: str) -> None:
 
 
 def _create_project_if_approved(idea_id: str, notion_url: str | None, title: str | None) -> None:
-    """Create a supabase project record for approved ideas."""
+    """Create a projects row and trigger Phase 3 build (GitHub, Vercel, Railway) if configured."""
+    product_name = (title or "").strip() or f"Product-{idea_id}"
     try:
-        supabase.table("projects").insert(
+        res = supabase.table("projects").insert(
             {
+                "product_name": product_name[:255],
                 "judged_idea_id": idea_id,
-                "title": title,
-                "notion_url": notion_url,
                 "status": "approved",
-                "created_at": datetime.now(timezone.utc).isoformat(),
             }
         ).execute()
         print(f"[plan request] Created project record for {idea_id}")
+        if res.data and len(res.data) > 0:
+            project_id = res.data[0].get("id")
+            if project_id:
+                try:
+                    from scripts.phase3_build import run_build_for_project
+                    out = run_build_for_project(project_id)
+                    if out.get("ok"):
+                        print(f"[plan request] Phase 3 build started for project {project_id}")
+                    else:
+                        print(f"[plan request] Phase 3 build skipped or failed: {out.get('error', '')}")
+                except Exception as e:
+                    print(f"[plan request] Phase 3 build error: {e}")
     except Exception as e:
         print(f"[plan request] Failed to create project record: {e}")
 

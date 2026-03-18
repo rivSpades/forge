@@ -37,6 +37,18 @@ class Settings:
     PLAN_EMAIL_PASSWORD: Optional[str] = None
     NOTION_TOKEN: Optional[str] = None
     NOTION_DATABASE_ID: Optional[str] = None
+    # Phase 3 — Build (personal GitHub, Vercel, Railway)
+    GITHUB_BOT_TOKEN: Optional[str] = None
+    VERCEL_TOKEN: Optional[str] = None
+    VERCEL_TEAM_ID: Optional[str] = None
+    RAILWAY_TOKEN: Optional[str] = None
+    CREDENTIAL_ENCRYPTION_KEY: Optional[str] = None
+    # GitHub webhook (Code Reviewer on push)
+    GITHUB_WEBHOOK_SECRET: Optional[str] = None
+    # Launch approval (one-click link in Launch Readiness Report email)
+    LAUNCH_APPROVAL_SECRET: Optional[str] = None
+    LAUNCH_GATEWAY_URL: Optional[str] = None  # e.g. https://forge.example.com
+    BUFFER_ACCESS_TOKEN: Optional[str] = None  # Buffer API for launch social post
 
 
 settings = Settings(
@@ -51,6 +63,15 @@ settings = Settings(
     PLAN_EMAIL_PASSWORD=_get_env("PLAN_EMAIL_PASSWORD", required=False),
     NOTION_TOKEN=_get_env("NOTION_TOKEN", required=False),
     NOTION_DATABASE_ID=_get_env("NOTION_DATABASE_ID", required=False),
+    GITHUB_BOT_TOKEN=_get_env("GITHUB_BOT_TOKEN", required=False),
+    VERCEL_TOKEN=_get_env("VERCEL_TOKEN", required=False),
+    VERCEL_TEAM_ID=_get_env("VERCEL_TEAM_ID", required=False),
+    RAILWAY_TOKEN=_get_env("RAILWAY_TOKEN", required=False),
+    CREDENTIAL_ENCRYPTION_KEY=_get_env("CREDENTIAL_ENCRYPTION_KEY", required=False),
+    GITHUB_WEBHOOK_SECRET=_get_env("GITHUB_WEBHOOK_SECRET", required=False),
+    LAUNCH_APPROVAL_SECRET=_get_env("LAUNCH_APPROVAL_SECRET", required=False),
+    LAUNCH_GATEWAY_URL=_get_env("LAUNCH_GATEWAY_URL", required=False),
+    BUFFER_ACCESS_TOKEN=_get_env("BUFFER_ACCESS_TOKEN", required=False),
 )
 
 # Optional convenience:
